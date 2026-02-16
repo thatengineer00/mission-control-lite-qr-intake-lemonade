@@ -34,21 +34,27 @@ npm run dev:ui
 
 ### Main Interface
 ![Main Page](screenshots/screenshot-01-main-page.png)
-*Main application interface showing all input methods (Camera Scan, Import QR Image, Sample Payload) and QR Gallery*
+*The main application interface features a modern dark theme with three input methods in the top row: Camera Scan (left), Import QR Image (center), and Sample Payload (right). Below is the QR Gallery with 8 pre-generated test scenarios. The compact layout is designed to fit on a laptop screen without excessive scrolling.*
 
-### QR Decoding
+### QR Decoding - Interview Scenario
 ![Decoded QR](screenshots/screenshot-02-decoded-qr.png)
-*Decoded QR code from the gallery showing JSON payload structure*
+*After clicking "Interview (business hours)" from the QR Gallery, the decoded JSON payload is displayed in the "Decoded QR Content" section. The payload shows visitor information including visitor_id, purpose, time, host, and badge requirements. The source is indicated as "GALLERY" and the "Submit to Mission Control" button is ready for submission.*
 
-### Mission Control Result
+### Mission Control Result - Interview Approved
 ![Mission Control Result](screenshots/screenshot-03-mission-control-result.png)
-*Complete workflow showing decoded QR content and Mission Control result with decision, route, explanation, and policy ID*
+*Complete workflow result for an interview scenario during business hours. The Mission Control system evaluated the payload and returned: **Decision**: APPROVE (green badge), **Route**: front_desk, **Explanation**: Enhanced by Lemonade VLM explaining the approval reason, **Policy ID**: interview_business_hours_v1, and **Model Used**: Qwen3-VL-4B-Instruct-GGUF. This demonstrates the full pipeline from QR decoding to policy evaluation to VLM-enhanced explanation.*
 
-### Policy Scenarios
+### QR Decoding - Contractor Scenario
 ![Contractor Scenario](screenshots/screenshot-04-contractor-scenario.png)
-*Contractor scenario QR code decoded and ready for submission*
+*Contractor scenario QR code decoded from the gallery. The payload shows a contractor visit scheduled for 18:00 (after business hours) with visitor_id V-20111. The decoded content is displayed in formatted JSON, ready for submission to Mission Control. This scenario will trigger the contractor_after_hours_v1 policy.*
 
-See the [screenshots directory](screenshots/) for all available screenshots.
+### Mission Control Result - Contractor Review
+![Contractor Result](screenshots/screenshot-05-contractor-result.png)
+*Result for the contractor after-hours scenario. The system routed this to **security** with a **review** decision, as contractors visiting outside business hours require additional verification. The explanation is enhanced by the Lemonade VLM to provide clear, user-friendly reasoning. This demonstrates how different policies produce different routing decisions based on the payload content.*
+
+---
+
+**Note**: All screenshots show the application running with the Lemonade VLM service active. The explanations in the Mission Control results are enhanced by the VLM, which is a required component of the workflow.
 
 ## What This Demo Shows
 
