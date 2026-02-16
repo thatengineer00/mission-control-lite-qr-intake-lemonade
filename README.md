@@ -30,6 +30,12 @@ npm run dev:ui
 
 **See [Installation](#installation) and [Running the Application](#running-the-application) for detailed instructions.**
 
+## Demo Video
+
+[![Watch the demo video](https://img.youtube.com/vi/YLiru2x2r3g/maxresdefault.jpg)](https://www.youtube.com/watch?v=YLiru2x2r3g)
+
+*Click the thumbnail above to watch the demo video on YouTube*
+
 ## Screenshots
 
 ### Main Interface
