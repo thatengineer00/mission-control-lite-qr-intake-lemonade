@@ -2,6 +2,7 @@
   "name": "mission-control-qr-intake-lemonade",
   "version": "1.0.0",
   "description": "Lemonade developer contest demo - QR intake with mission control routing",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "gen:qrs": "tsx tools/generate_qrs.ts",
