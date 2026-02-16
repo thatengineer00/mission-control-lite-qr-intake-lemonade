@@ -30,6 +30,26 @@ npm run dev:ui
 
 **See [Installation](#installation) and [Running the Application](#running-the-application) for detailed instructions.**
 
+## Screenshots
+
+### Main Interface
+![Main Page](screenshots/screenshot-01-main-page.png)
+*Main application interface showing all input methods (Camera Scan, Import QR Image, Sample Payload) and QR Gallery*
+
+### QR Decoding
+![Decoded QR](screenshots/screenshot-02-decoded-qr.png)
+*Decoded QR code from the gallery showing JSON payload structure*
+
+### Mission Control Result
+![Mission Control Result](screenshots/screenshot-03-mission-control-result.png)
+*Complete workflow showing decoded QR content and Mission Control result with decision, route, explanation, and policy ID*
+
+### Policy Scenarios
+![Contractor Scenario](screenshots/screenshot-04-contractor-scenario.png)
+*Contractor scenario QR code decoded and ready for submission*
+
+See the [screenshots directory](screenshots/) for all available screenshots.
+
 ## What This Demo Shows
 
 This application demonstrates:
@@ -250,6 +270,8 @@ cd ui && npm run preview
 
 Once all services are running, open `http://localhost:3000` in your browser.
 
+> **Visual Guide**: See the [Screenshots](#screenshots) section above for examples of the interface and workflow.
+
 #### Input Methods
 
 1. **Camera Scan**
@@ -442,6 +464,8 @@ mission-control-qr-intake-lemonade/
 │       └── qrs/              # Generated QR images
 ├── tools/
 │   └── generate_qrs.ts      # QR generation script
+├── screenshots/              # Application screenshots
+│   └── *.png                # Screenshot images
 └── README.md
 ```
 
