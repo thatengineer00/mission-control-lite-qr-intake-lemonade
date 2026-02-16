@@ -32,9 +32,7 @@ npm run dev:ui
 
 ## Demo Video
 
-[![Watch the demo video](https://img.youtube.com/vi/YLiru2x2r3g/maxresdefault.jpg)](https://www.youtube.com/watch?v=YLiru2x2r3g)
-
-*Click the thumbnail above to watch the demo video on YouTube*
+[![Watch the demo video](screenshots/screenshot-01-main-page.png)](https://www.youtube.com/watch?v=YLiru2x2r3g)
 
 ## Screenshots
 
@@ -324,37 +322,6 @@ The Mission Control Result shows:
 - **Explanation**: Human-readable reason (enhanced by Lemonade VLM)
 - **Policy ID**: Which policy matched (e.g., `interview_business_hours_v1`)
 - **Model Used**: The Lemonade model that enhanced the explanation
-
-## 60-Second Demo Script
-
-**Note**: Run all commands from the project root directory.
-
-### Step 1: Start Services (10 seconds)
-1. **Start Lemonade first** (REQUIRED): `lemonade serve` (in terminal 1)
-2. Start backend: `npm run dev:server` (in terminal 2, from project root)
-3. Start frontend: `npm run dev:ui` (in terminal 3, from project root)
-
-**Important**: Lemonade must be running before starting the backend, as VLM is required.
-
-### Step 2: Test QR Gallery (20 seconds)
-1. Open `http://localhost:3000` in browser
-2. Scroll to "QR Gallery" section
-3. Click "Interview (business hours)"
-4. Verify decoded payload appears in "Decoded QR Content"
-5. Click "Submit to Mission Control"
-
-### Step 3: Verify Result (10 seconds)
-- Check that result shows:
-  - **Decision**: `approve`
-  - **Route**: `front_desk`
-  - **Explanation**: (enhanced by Lemonade VLM - required)
-  - **Policy ID**: `interview_business_hours_v1`
-  - **Model Used**: `Qwen3-VL-4B-Instruct-GGUF` (or your configured model)
-
-### Step 4: Test Other Policies (20 seconds)
-- Click "Contractor (after hours)" → Should route to `security` with `review` decision
-- Click "Delivery (no badge)" → Should route to `front_desk` with `approve` decision
-- Click "Unknown (default)" → Should route to `security` with `review` decision
 
 ## Judge Mode
 
